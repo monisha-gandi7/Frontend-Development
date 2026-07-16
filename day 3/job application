@@ -1,1 +1,135 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Job Application Form</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#eef2f3;
+}
+
+.container{
+    width:500px;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+h2{
+    text-align:center;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid gray;
+    border-radius:5px;
+}
+
+.gender{
+    margin-top:10px;
+}
+
+.gender input{
+    width:auto;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#007BFF;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Job Application Form</h2>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter email">
+
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter phone number">
+
+<label>Gender</label>
+
+<div class="gender">
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<input type="radio" name="gender"> Other
+</div>
+
+<label>Date of Birth</label>
+<input type="date">
+
+<label>Highest Qualification</label>
+
+<select>
+<option>Select Qualification</option>
+<option>Diploma</option>
+<option>B.Tech</option>
+<option>M.Tech</option>
+<option>MCA</option>
+<option>B.Sc</option>
+</select>
+
+<label>Position Applying For</label>
+
+<select>
+<option>Software Developer</option>
+<option>Frontend Developer</option>
+<option>Backend Developer</option>
+<option>Java Developer</option>
+<option>Python Developer</option>
+</select>
+
+<label>Skills</label>
+<textarea rows="4" placeholder="Mention your skills"></textarea>
+
+<label>Upload Resume</label>
+<input type="file">
+
+<button>Apply Now</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
