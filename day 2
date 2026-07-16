@@ -1,1 +1,217 @@
+// HTML
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <link rel="stylesheet" href="logo.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="c:\Users\monis\Downloads\WhatsApp Image 2026-07-15 at 1.21.00 PM.jpeg" alt="College Logo">
+        </div>
+
+        <div class="title">
+            <h2>Vishnu Institute of Technology</h2>
+        </div>
+
+        <div class="info">
+            <h3>Info:Vishnu.ac.in</h3>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">Placements</a>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="content">
+
+        <!-- Sidebar -->
+        <aside>
+            <h3>Sidebar</h3>
+
+            <ul>
+                <li>Dashboard</li>
+                <li>Departments</li>
+                <li>Events</li>
+                <li>Library</li>
+                <li>Faculty</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+
+            <div class="cards">
+
+                <div class="card">CSE</div>
+                <div class="card">IT</div>
+                <div class="card">CSE</div>
+                <div class="card">MECH</div>
+                <div class="card">AIDS</div>
+                <div class="card">AIML</div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+// css
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+.container{
+    width:90%;
+    margin:30px auto;
+    background:white;
+    border:2px solid black;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-left:20px;
+    margin-right:20px;
+    padding:20px;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.title{
+    flex:1;
+    margin-left:20px;
+}
+
+.info{
+    font-size:20px;
+}
+
+/* Navigation */
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    padding:15px;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    background:#eee;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:blue;
+}
+
+/* Main Content */
+
+.content{
+    display:flex;
+}
+
+/* Sidebar */
+
+aside{
+    width:220px;
+    border-right:2px solid black;
+    padding:20px;
+}
+
+aside ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+aside li{
+    padding:10px 0;
+}
+
+/* Main */
+
+main{
+    flex:1;
+    padding:20px;
+}
+
+/* Cards */
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:120px;
+    height:100px;
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:10px;
+    background:#f0f8ff;
+    transition:0.3s;
+}
+
+.card:hover{
+    background:#4CAF50;
+    color:white;
+    transform:scale(1.05);
+}
