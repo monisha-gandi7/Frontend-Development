@@ -1,1 +1,112 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Form</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f2f2f2;
+}
+
+.container{
+    width:400px;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+h2{
+    text-align:center;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+textarea{
+    resize:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:green;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkgreen;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Feedback Form</h2>
+
+<form>
+
+<label>Name</label>
+<input type="text" placeholder="Enter your name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email">
+
+<label>Course</label>
+
+<select>
+<option>Select Course</option>
+<option>CSE</option>
+<option>IT</option>
+<option>ECE</option>
+<option>EEE</option>
+<option>MECH</option>
+</select>
+
+<label>Rating</label>
+
+<select>
+<option>Excellent</option>
+<option>Very Good</option>
+<option>Good</option>
+<option>Average</option>
+<option>Poor</option>
+</select>
+
+<label>Your Feedback</label>
+
+<textarea rows="5" placeholder="Write your feedback"></textarea>
+
+<button>Submit</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
