@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Destructuring with Default Values</h1>
+    <p>Here are some examples of array destructuring with default values in JavaScript:</p>
+</body>
+<script>
+       
+        const numbers = [1, 2];
+        const [first = 10, second = 20, third = 30] = numbers;
+        console.log(first); 
+        console.log(second); 
+        console.log(third); 
+
+        const moreNumbers = [];
+        const [a = 5, b = 10] = moreNumbers;
+        console.log(a); 
+        console.log(b);
+</script>
+</body>
+</html>
