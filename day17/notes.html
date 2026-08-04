@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    textarea {
+        width: 800px;
+        height: 200px;
+    }
+
+    button {
+        margin-right: 20px;
+    }
+
+    #notescontainer div {
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+
+    <h2>Notes App</h2>
+
+    <textarea id="notesinput" placeholder="Enter your note"></textarea>
+    <br><br>
+
+    <button id="additem">Add Note</button>
+    <button id="clearall">Clear All</button>
+
+    <hr>
+
+    <div id="notescontainer"></div>
+
+    <script>
+        const notesinput = document.getElementById("notesinput");
+        const additem = document.getElementById("additem");
+        const clearall = document.getElementById("clearall");
+        const notescontainer = document.getElementById("notescontainer");
+
+        let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+        displayNotes();
+
+       
+        additem.addEventListener("click", () => {
+            if (notesinput.value.trim() === "") {
+                alert("Please enter a note");
+                return;
+            }
+
+            notes.push(notesinput.value.trim());
+            updateNotes();
+            notesinput.value = "";
+        });
+
+        
+        function displayNotes() {
+            notescontainer.innerHTML = "";
+
+            notes.forEach((note, index) => {
+                const div = document.createElement("div");
+
+                const span = document.createElement("span");
+                span.textContent = note;
+
+                const deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "Delete";
+
+                deleteBtn.addEventListener("click", () => {
+                    notes.splice(index, 1);
+                    updateNotes();
+                });
+
+                div.appendChild(span);
+                div.appendChild(document.createTextNode(" "));
+                div.appendChild(deleteBtn);
+
+                notescontainer.appendChild(div);
+                notescontainer.appendChild(document.createElement("br"));
+            });
+        }
+
+        
+        function updateNotes() {
+            localStorage.setItem("notes", JSON.stringify(notes));
+            displayNotes();
+        }
+
+        
+        clearall.addEventListener("click", () => {
+            notes = [];
+            updateNotes();
+        });
+    </script>
+
+</body>
+</html>
